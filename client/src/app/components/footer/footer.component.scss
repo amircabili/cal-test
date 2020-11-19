@@ -1,0 +1,73 @@
+footer{
+
+    a{
+      text-decoration: none;
+    }
+
+  .box.boxWrapper{
+    min-height: 200px;
+    color:white;
+    text-align: center;
+    margin-right: 3px;
+
+    .row{
+      .link{
+        position: relative;
+
+          a{
+            div{
+              &.facebook{
+                background:no-repeat center  url("../../../media/pics/facebook.jpg");
+                width:44px;
+                height:55px;
+              }
+              &.twitter{
+                background:no-repeat center  url("../../../media/pics/twitter.jpg");
+                width:44px;
+                height:55px;
+              }
+              &.pinterest{
+                background:no-repeat center  url("../../../media/pics/pinterest.jpg");
+                width:44px;
+                height:55px;
+              }
+              &.instagram{
+                background:no-repeat center  url("../../../media/pics/instagram.jpg");
+                width:44px;
+                height:55px;
+              }
+            }
+          }
+      }
+    }
+
+    span.header{
+
+      position: relative;
+      color:white;
+      letter-spacing: 3px;
+      font-size: 36px;
+      text-align: center;
+      width: 100%;
+      display: block;
+    }
+
+
+    &.blackBox{
+      background:#333333;
+    }
+
+    &.blueBox{
+        background:#00c8c8;
+    }
+
+  }
+
+  .bottomFooter{
+    background: #333333;
+    color:#767676;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}

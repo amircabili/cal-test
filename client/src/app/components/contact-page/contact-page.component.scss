@@ -1,0 +1,28 @@
+.contactPageComponent{
+  span,a,h1,h2,h3,h4,h5{
+    line-height: normal  ;
+  }
+
+  .homePageWrapper{
+    background:no-repeat center  url('../../../media/pics/back1.jpg');
+    min-height: 450px;
+    background-size: cover;
+    height: 100%;
+
+    .header{
+      .header1{
+        position: relative;
+        color:white;
+        letter-spacing: 2px;
+        font-size: 46px;
+      }
+      .header2{
+        position: relative;
+        color:white;
+        color:white;
+        letter-spacing: 2px;
+        font-size: 26px;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div class="loginPageComponent">
+  <div class="homePageWrapper d-flex">
+    <div class="row w-100">
+          <span class="header justify-content-center align-self-center text-center">
+              <p class="header1"><b>WELCOME</b> TO AVE </p>
+              <p class="header2 ">SIGN IN OR REGISTER</p>
+        </span>
+    </div>
+  </div>
+  <div class="container marketing py-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="row">
+          <div class="col-sm-6 col-xs-12 ">
+            <div class=" ">
+              <h2 class="mb-0">Login</h2>
+            </div>
+            <div class="card-body">
+              <form action="" class="from">
+                <div class="form-group">
+                  <label for="loginEmail">Email</label>
+                  <input  id="loginEmail" [(ngModel)]="loginUserData.email" name="email" type="text" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                  <label for="loginPassword">Password</label>
+                  <input  id="loginPassword" [(ngModel)]="loginUserData.password" name="password" type="password" class="form-control rounded-0" required>
+                </div>
+                <button (click)="loginUser()"  class="btn-primary rounded-1 float-right">Login</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xs-12 ">
+            <div class=" ">
+              <h2 class="mb-0">Register</h2>
+            </div>
+            <div class="card-body">
+              <form action="" class="from">
+                <div class="form-group">
+                  <label for="registerEmail">Email</label>
+                  <input  id="registerEmail" [(ngModel)]="registerUserData.email" name="email" type="text" class="form-control rounded-0" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input  id="password" [(ngModel)]="registerUserData.password" name="password" type="password" class="form-control rounded-0" required>
+                </div>
+                <button (click)="registerUser()"  class="btn-primary rounded-1 float-right">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
