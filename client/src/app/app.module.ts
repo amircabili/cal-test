@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule  } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -12,8 +11,15 @@ import {AppRoutingModule} from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { LoginPageComponent } from './components/login-page/login-page.component';
+import {LoginPageComponent} from './components/login-page/login-page.component';
 import {AuthService} from './services/auth.service';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {AuthGuard} from './auth.guard';
+import {UserPageComponent} from './components/user-page/user-page.component';
+import {TokenInterceptorService} from './services/token-interceptor.service';
+import {UserService} from './services/user.service';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +28,8 @@ import {AuthService} from './services/auth.service';
     FooterComponent,
     ContactPageComponent,
     HomePageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,
@@ -31,10 +38,16 @@ import {AuthService} from './services/auth.service';
     MatCardModule,
     MatFormFieldModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    UserService,
+    AuthGuard,
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }
   ],
   bootstrap: [AppComponent]
 })

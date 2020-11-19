@@ -1,0 +1,36 @@
+<div class="userPageComponent">
+  <div class="userPageWrapper d-flex">
+    <div class="row w-100">
+          <span class="header justify-content-center align-self-center text-center">
+              <p class="header1"><b>WELCOME</b> TO AVE </p>
+              <p class="header2 ">SIGN IN OR REGISTER</p>
+        </span>
+    </div>
+  </div>
+  <div class="container marketing py-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="row">
+          <div class="col-sm-12 col-xs-12 ">
+            <h1 class="display-3">Personal User Page - You Are Looged in :) !</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <hr>
+            <div class="row">
+              <h1 class="display-3">Your Cart Items:</h1>
+              <div class="col-md-4 my-2" *ngFor="let item of user">
+                <div>
+                  <h4>name {{item.name}}</h4>
+                </div><p>
+                  <b>{{item.description}}</b></p>
+                <p><span>{{item.date | date:'shortDate'}}</span></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

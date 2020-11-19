@@ -16,8 +16,9 @@
           </div>
         </div>
         <div class="ml-auto col-md-3 col-xs-12 float-right"><nav class="nav nav-masthead justify-content-left">
-           <a class="nav-link mt-1" href="#"  routerLink="/login" routerLinkActive="active">Register</a>
-          <a class="nav-link mt-1" href="#"  routerLink="/login" routerLinkActive="active">  Sign In    </a>
+           <a *ngIf="!authService.loggedIn()" class="nav-link mt-1" href="#"  routerLink="/login" routerLinkActive="active">Register</a>
+           <a *ngIf="!authService.loggedIn()" class="nav-link mt-1" href="#"  routerLink="/login" routerLinkActive="active">  Sign In </a>
+           <a *ngIf="authService.loggedIn()" (click)="authService.logOutUser()" class="nav-link mt-1" href="javascript:;"  routerLink="/login" routerLinkActive="active">  LogOut </a>
         </nav>
         </div>
         <div class="mr-auto col-md-2 col-xs-12 float-right">
@@ -26,7 +27,7 @@
               <span>empty</span><i class="arrow down"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#" routerLink="/user" routerLinkActive="active">Go To User Page</a>
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
