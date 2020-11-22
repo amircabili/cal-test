@@ -22,7 +22,7 @@ export class LoginPageComponent implements OnInit {
     private _auth: AuthService,
     // tslint:disable-next-line:variable-name
     private _router: Router,
-    private formBuilder: FormBuilder
+    public formBuilder: FormBuilder
   ) {
     this.registerUserData = formBuilder.group({
       email: '',

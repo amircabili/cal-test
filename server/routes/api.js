@@ -78,7 +78,7 @@ router.post('/login', (req, res) => {
 })
 
 
-router.get('/user', (req, res)=> {
+router.get('/user',verifyToken, (req, res)=> {
     let events =    [
         {"id": 1,"name": "item1","description":"lorem ipsum","date":"2020-04-23T18:25:43.511Z"},
         {"id": 2,"name": "item2","description":"lorem ipsum","date":"2020-04-23T18:25:43.511Z"},

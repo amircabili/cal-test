@@ -8,7 +8,7 @@ import {AuthService} from './auth.service';
 export class TokenInterceptorService implements HttpInterceptor {
 
   constructor(
-    private injector: Injector
+    public injector: Injector
   ) { }
 
   // tslint:disable-next-line:typedef
